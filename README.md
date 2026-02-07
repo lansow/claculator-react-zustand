@@ -2,8 +2,6 @@
 
 ---
 
-## نسخه فارسی
-
 <div dir="rtl">
 
 # ماشین حساب React با Zustand
@@ -178,8 +176,6 @@ yarn build
 </div>
 
 ---
-
-## English Version
 
 # React + Zustand Calculator
 
