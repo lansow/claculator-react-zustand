@@ -8,7 +8,9 @@
 
 یک ماشین حساب ساده و مدرن ساخته شده با React و Zustand برای مدیریت حالت (state management).
 
-![پیش‌نمایش ماشین حساب](https://img.shields.io/badge/React-19.2-blue)
+![پیش‌نمایش ماشین حساب](./public/assets/Screenshot.png)
+
+![reactjs](https://img.shields.io/badge/React-19.2-blue)
 ![Zustand](https://img.shields.io/badge/Zustand-5.0-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
@@ -181,7 +183,9 @@ yarn build
 
 A simple and modern calculator built with React and Zustand for state management.
 
-![Calculator Preview](https://img.shields.io/badge/React-19.2-blue)
+![Calculator Preview](./public/assets/Screenshot.png)
+
+![reactjs](https://img.shields.io/badge/React-19.2-blue)
 ![Zustand](https://img.shields.io/badge/Zustand-5.0-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
