@@ -72,7 +72,7 @@ yarn run dev
 </div>
 
 ```
-http://localhost:3000
+http://localhost:3050
 ```
 
 <div dir="rtl">
@@ -232,7 +232,7 @@ yarn run dev
 4. Open your browser and navigate to:
 
 ```
-http://localhost:3000
+http://localhost:3050
 ```
 
 ## 🛠 Technologies Used
