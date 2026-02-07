@@ -8,7 +8,6 @@ export default function Calculator() {
   const lastResult = useCalculateStore((s) => s.result);
   const actions = useCalculateStore((s) => s);
 
-  // keyboard support
   useEffect(() => {
     const handleKey = (e) => {
       if (/^\d$/.test(e.key)) actions.inputDigit(e.key);

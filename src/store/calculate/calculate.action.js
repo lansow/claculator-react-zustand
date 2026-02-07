@@ -7,10 +7,8 @@ export const calculateAction = (set, get) => ({
     let newTokens = [...tokens];
 
     if (newTokens.length === 0 || isOperator(newTokens[newTokens.length - 1])) {
-      // عدد جدید شروع کن
       newTokens.push(parseFloat(newCurrent));
     } else {
-      // آخرین عدد را آپدیت کن
       const lastIndex = newTokens.length - 1;
       const lastNum = newTokens[lastIndex];
       const updatedNum = parseFloat(lastNum.toString() + digit);
@@ -86,40 +84,33 @@ export const calculateAction = (set, get) => ({
     let newTokens = [...tokens];
 
     if (displayString.endsWith(" ")) {
-      // حالت ۱: کاربر در حال پاک کردن اپراتور است (مثال: "5 + ")
       newDisplay = displayString.slice(0, -3);
-      newTokens.pop(); // حذف اپراتور
+      newTokens.pop();
     } else {
-      // حالت ۲: کاربر در حال پاک کردن رقم از عدد است (مثال: "123" یا "5 + 12")
       newDisplay = displayString.slice(0, -1);
 
       if (newDisplay === "" || newDisplay.endsWith(" ")) {
-        // اگر همه چیز پاک شد یا به اپراتور رسیدیم
         newTokens = [];
       } else if (
         newTokens.length > 0 &&
         typeof newTokens[newTokens.length - 1] === "number"
       ) {
-        // آخرین توکن یک عدد است - باید رقم آخر آن را پاک کنیم
         const lastNum = newTokens[newTokens.length - 1];
         const lastNumStr = lastNum.toString();
 
         if (lastNumStr.length > 1) {
-          // اگر عدد بیش از یک رقم دارد، فقط آخرین رقم را پاک کن
           const newNumStr = lastNumStr.slice(0, -1);
           newTokens[newTokens.length - 1] = parseFloat(newNumStr);
         } else {
-          // اگر عدد فقط یک رقم دارد، کل عدد را پاک کن
           newTokens.pop();
         }
       }
     }
 
-    // به‌روزرسانی state
     set({
       displayString: newDisplay,
       tokens: newTokens,
-      current: newDisplay.split(" ").pop() || "0", // عدد جاری را به‌روزرسانی کن
+      current: newDisplay.split(" ").pop() || "0",
       result: newDisplay.split(" ").pop() || "0",
     });
   },

@@ -36,7 +36,7 @@
   color: #aaa;
 
   display: flex;
-  justify-content: flex-end; /* چسبیدن محتوا به راست */
+  justify-content: flex-end;
   overflow: hidden;
 
   white-space: nowrap;
@@ -50,16 +50,15 @@
   white-space: nowrap;
 }
 
-/* fade effect سمت راست وقتی history طولانی شد */
 .history::after {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
-  width: 40px; /* عرض fade */
+  width: 40px;
   height: 100%;
   pointer-events: none;
-  background: linear-gradient(to right, #000, transparent); /* از چپ fade */
+  background: linear-gradient(to right, #000, transparent);
 }
 
 .current {
